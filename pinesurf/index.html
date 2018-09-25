@@ -1,0 +1,31 @@
+    <!--#include virtual="/top.html" -->
+
+    <!--#config timefmt="%d.%m %Y" -->
+    <span>Date: <!--#echo var="DATE_LOCAL" --></span>
+    <br />
+    <span>File listing:
+        <!--#exec cmd="ls" -->
+    </span>
+
+    <br />
+    <span>Variable:
+        <!--#set var="foo" value="bar" -->
+        <!--#echo var="foo" -->
+        <!--#printenv -->
+    </span>
+    <!--#if expr="%{TIME_HOUR} <12" -->
+        <h1>True dat</h1>
+    <!--#endif -->
+
+    <!--#include virtual="/images/h.jpg" -->
+
+    <img src="/images/h.jpg">
+    <img src="http://pinesurf/images/h.jpg">
+    <img src="/images-not-data-urls/h.jpg">
+
+    <!--#include virtual="/form.html" -->
+
+    <!--#include virtual="/bottom.html" -->
+
+  </body>
+</html>

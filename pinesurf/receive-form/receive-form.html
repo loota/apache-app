@@ -1,0 +1,11 @@
+<!--#include virtual="/top.html" -->
+
+<!--#if expr='v("REQUEST_URI") =~ /[?]/' -->
+    <!--#if expr='v("REQUEST_URI") =~ /[?]amount-of-pines=(.*?)(&|$)/ && $1 =~ /(.*)/' -->
+        <!--#set var="request" value="$0" ->
+    <!--#endif -->
+<!--#endif -->
+<h1>You sent <!--#echo encoding="entity" var="request" --></h1>
+
+
+<!--#include virtual="/bottom.html" -->
